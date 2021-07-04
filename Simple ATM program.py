@@ -46,7 +46,7 @@ else:
     exit()
 
 try:
-    if withdrawal < 100:
+    if withdrawal < account_balance:
         remaining= 100 - withdrawal
         print('Successful withdrawal. You have £{} remaining'.format(remaining))
     else:
