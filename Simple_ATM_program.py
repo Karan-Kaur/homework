@@ -39,12 +39,12 @@ def pin_code():
     while counter < 3:
         pin = int(input('Welcome! Please Enter Your 4 Digit Pin code:')) #tried to make exception if user inputted strings but did not work
         if pin > 1000 and pin < 9999:
-            print("Pin code accepted!")
+            print("Pin code accepted")
             check_balance()
             exit()
         else:
-            print("Invalid pin")
+            print("Invalid pin code")
             counter += 1
-    sys.exit("Three unsuccessful attempts. Please exit ")
+    sys.exit("Three unsuccessful attempts. Please exit")
 
 pin_code()
