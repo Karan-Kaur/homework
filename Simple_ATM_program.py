@@ -7,11 +7,18 @@
     #else:
         #print("Pin code entry successful")
         #break
+def check_balance():
+    checking = input('Would you like to check your balance? Y/N ')
+    if checking.upper() == 'Y':
+        print('Your balance is £100')
+        withdraw()
+    else:
+        withdraw()
 
 def withdraw():
     account_balance = 100
     withdrawal = float(input("Please input the amount you would like to withdraw: £")) #tried to make exception for neg integers but did not work
-    check = input('Please confirm you would like to withdraw £{}: Y or N '.format(withdrawal))
+    check = input('Please confirm you would like to withdraw £{}: Y/N '.format(withdrawal))
     if check.upper() == 'Y':
         print('Transaction in process')
     else:
@@ -33,7 +40,7 @@ def pin_code():
         pin = int(input('Welcome! Please Enter Your 4 Digit Pin code:')) #tried to make exception if user inputted strings but did not work
         if pin > 1000 and pin < 9999:
             print("Pin code accepted!")
-            withdraw()
+            check_balance()
             exit()
         else:
             print("Invalid pin")
