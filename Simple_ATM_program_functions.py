@@ -1,5 +1,5 @@
 #ATM functions
-#breaking into chunks for tests
+#breaking into chunks for unit testing
 def pin_code():
     for atm in range(3):
         pin = int(input('Welcome! Please enter your 4-digit pin code: '))
