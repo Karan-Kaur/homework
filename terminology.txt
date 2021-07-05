@@ -1,0 +1,20 @@
+Homework: Lesson 7 – Git & GitHub terminology
+
+GIT WORKFLOW FUNDAMENTALS
+• Working Directory- This refers to the folder in which the files a user a currently working on are stored. This can be identified by a file path.
+• Staging Area- This a middle stage between a working directory and a repository. It holds changes that have been added by the user but are not yet ready to be committed to the repository.
+• Local Repo (head)- this a storage area held on the user’s local desktop (usually). It contains the files they will have created/modified but have not been shared elsewhere.
+• Remote repo (master)- a remote repository stores files that have been pushed from a user’s local repo to a host (e.g., GitHub), whether it is for collaboration purposes, portfolios etc.
+
+WORKING DIRECTORY STATES:
+• Staged- staged files are ones that have been added by the user but are yet to be committed.
+• Modified- modified files are ones that have been edited/altered by a user since a prior commit.
+• Committed- committed files are those that have been in the staging area and now stored in the user’s local repository.
+
+GIT COMMANDS:
+• Git add- this command adds files a user has been revising to a staging area.
+• Git commit- this command moves the files held in the staging area to the local repo.
+• Git push- this command sends files from a local rep to a remote repo.
+• Git fetch- this command retrieves information from a project stored in a remote repo without merging them with the user’s local repo.
+• Git merge- this command combines two branches. For example, a user may have experimented on another branch and, once satisfied with their work, may merge this to the master branch.
+• Git pull- this command retrieves information from a project stored in a remote repo and updates the local repo to update it to the project’s most recent status.
