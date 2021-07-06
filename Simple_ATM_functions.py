@@ -8,27 +8,23 @@ def pin(num):
     else:
         return False
 
-#print(pin(209))
+print(pin(209))
 
 #checks given pin is an integer
 def check_int(num1):
     if num1 is not int:
         raise TypeError('Please enter integers')
 
-#check_int('abc')
+check_int('abc')
 
 #checks withdrawal amount is positive
 def check_pos(num2):
     if num2 < 0:
         raise ValueError('Please enter a positive number')
 
-#check_pos(-19)
+check_pos(-19)
 
 #checks withdrawal calculation
 def check_withdraw(num3):
     return 100 - num3
-#print(check_withdraw(30))
-
-def check_withdraw1():
-    num4 = int(input('How much would you like to withdraw? £ '))
-    return 100 - num4 ('')
+print(check_withdraw(30))
