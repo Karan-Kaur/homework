@@ -17,7 +17,9 @@ def check_balance():
 
 def withdraw():
     account_balance = 100
-    withdrawal = float(input("Please input the amount you would like to withdraw: £")) #tried to make exception for neg integers but did not work
+    withdrawal = float(input("Please input the amount you would like to withdraw: £"))
+    if withdrawal < 0:
+        raise ValueError('Please enter a positive number')
     check = input('Please confirm you would like to withdraw £{}: Y/N '.format(withdrawal))
     if check.upper() == 'Y':
         print('Transaction in process')
