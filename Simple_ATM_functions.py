@@ -24,6 +24,15 @@ def check_pos(num2):
 
 check_pos(-19)
 
+#checks balance amount is positive
+def check_remaining(num4):
+    if num4 > 0:
+        return True
+    else:
+        return False
+
+check_remaining(-19)
+
 #checks withdrawal calculation
 def check_withdraw(num3):
     return 100 - num3
