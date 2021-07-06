@@ -1,23 +1,17 @@
 import unittest
 from Simple_ATM_functions import check_withdraw
 
-
+#seeing what output looks like
 class TestExp(unittest.TestCase):
     def test_experimenting(self):
         pass
-#takes into account users input pin code- incorrect
-class TestPin(unittest.TestCase):
-    def test_pincode(self):
-        expected = 'Invalid pin code' #assume
-        result = pin_code()
-        self.assertEqual(expected, result) #assert
 
-#does not need user input- still issues
-class TestPin2(unittest.TestCase):
-    def test_givenpin(self):
-        expected = 'Invalid'  # assume
-        result = pin_code2(999)  # #action
-        self.assertEqual(expected, result) #assert
+#checking withdrawal calculation
+class TestWithdraw(unittest.TestCase):
+    def test_check_withdraw(self):
+        self.assertEqual(check_withdraw(30), 70)
+        self.assertEqual(check_withdraw(49), 51)
+        self.assertEqual(check_withdraw(90), 10)
 
 
 if __name__ == '__main__':
