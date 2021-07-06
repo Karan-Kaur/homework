@@ -26,7 +26,7 @@ check_pos(-19)
 
 #checks balance amount is positive
 def check_remaining(num4):
-    if num4 > 0:
+    if num4 > 0 and num4 < 100:
         return True
     else:
         return False
