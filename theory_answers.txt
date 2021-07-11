@@ -1,0 +1,196 @@
+Python Theory Qs- Answers:
+1.  What is Python and what are its main features?
+Python is a programming language, which is what it used to communicate instructions to a computer.
+Python specifically has many features which distinguish it as a programming language in its own right, including:
+- the fact it is free and open source
+- it object-oriented
+- it is a high-level language- do not need to remember the system architecture nor manage the memory.
+- can write Python code into C or C++ language
+- portable
+- interpreted- no need to compile python code. Executed line by line.
+
+2.  Discuss the difference between Python2 and Python3
+Python 2 and Python 3 are two versions of the programming language, with the latter being the more recent, developed version which is more like to receive additional features.
+They differ in some ways regarding their functions, syntax etc, for example:
+Strings- It is not compulsory to use parenthesis in Python 2, unlike Python 3
+Int division- Integer division in Python 3 can return a float, while Python 2 will return an integer unless the given values are floats.
+Unicode- Strings in Python 3 are unicode by default while Python 2 requires the letter 'u' to preface the string.
+Input- this function reads inputs as strings in Python 3, while they are considered numbers in Python 2 unless in quote marks.
+
+3.  What is PEP8?
+Pep8 is a document which lays out several coding conventions when using Python; the recommended styles help provide consistency across the coding language and ensure best practice.
+
+4.  In computing/computerscience what is a program?
+A program is a collection of coded instructions that are run by a computer. They are created using a programming language with the purpose of performing a task when executed. (by computer)
+
+5.  In computing/computerscience what is a process?
+A process refers to the set of instructions being executed as part of a program. The executing of a program triggers a process in which the contained tasks are performed.
+
+6.  In computing/computerscience what is cache?
+Cache is a type of memory contained within Central Processing Unit (CPU). If a process/instruction is used frequently (or likely to be), it can be temporarily held in cache memory which is easier and quicker to access
+than other types of memory storage since it is local and prevents frequent fetching from RAM.
+
+7.  In computing/computerscience what is a thread and what do we mean by multithreading?
+A thread is component/entity within a process that can be executed independent of other code. It is notably the smallest sequence of programmed instructions that can be programmed in an OS.
+Multithreading refers to the action of executing multiple threads in parallel i.e., multiple threads execute a task rather than a single thread.
+Each thread within a process will contain its own register and own slack memory storing their local variables but will all share the program code and global variables.
+
+8.  In computing/computerscience what is concurrency and parallelism and what are the differences?
+Concurrency refers to the execution of multiple tasks at the same time i.e., in an overlapping period, more than one task may be in processing.
+Meanwhile, parallelism refers to the processing of one task, though the splitting of these can be processed in parallel across multiple CPU cores/processors (while concurrency is associated with a single CPU).
+Both phenomena can co-exist if an application works on several tasks at once and the task is broken into subtasks that can be executed in parallel.
+
+9.  What is GIL in Python and how does it work?
+GIL (or Global Interpreter Lock) is a lock that prevents the Python interpreter from executing multiple threads at a time.
+This lock restriction means processes are run as single threads, helping to prevent issues of overwriting data, deadlocks etc.
+
+10. What do these software development principles mean: DRY,KISS,BDUF
+DRY- Don't Repeat Yourself- this principle aims to reduce repetition and serves to remind programmers to try to divide code into segments, preferably re-usable ones if it is a reoccuring feature. It can be called upon, saving time and space.
+
+KISS- Keep It Simple Stupid- this principle is a reminder to keep code simple and as easy to understand as possible.
+By keeping it clear and concise, it will be easier to understand the purpose of the code segment, find and debug errors and this ultimately saves time.
+
+BDUF- Big Design Up Front- this principle suggests programmers complete a satisfactory design for a website, app, software etc, before the implementation begins.
+It assumes that the goals/requirements and the scope of the project are already clear and unlikely to change dramatically and so a planned design can be adhered to while honing in on details later in the process.
+
+11. What is a GarbageCollector in Python and how does it work?
+Python’s GarbageCollector is a tool used in the automatic deletion of unwanted objects, such as class instances, as a way to free memory space.
+The garbage collector is accessed in the gc module and has a threshold of objects (which can be changed). When the number of objects exceeds this threshold, a collection process is triggered by the GarbageCollector.
+While it is typically automatic, it can be disabled or triggered manually through on a time basis (after a fixed time) or on an event basis (e.g., exit application).
+This module is usually accessed when an instance has a reference to itself, and so it is not 0- this refers to a reference cycle which cannot be tackled by reference counting, another method of automatic garbage collection.
+This method involves a process of counting the number of times an object is referenced- when references are removed, the count is decremented. If it reaches 0, the garbage collection is triggered and the object’s memory is automatically deallocated.
+
+12. How is memory managed in Python?
+Following the execution of instructions, the parameters of methods or functions and references are stored in stack, which essentially contains temporary data.
+Objects and values are stored in a private heap- the memory space which can be both allocated to a process during its run time and de-allocated. Heap also holds the data structures and global variables.
+This is managed by the Python memory manager which deals with dynamic (re-)allocation, sharing etc and it not controlled by the user, but rather activated by the interpreter.
+
+13. What is a Python module?
+A Python module is a file with a .py extension which contains code defining functions and variables (irrespective of the data type).
+It is possible to import built-in modules, as well as those you have created in another file, into your current program.
+
+14. What is docstring in Python?
+A docstring is a string literal which can be incorporated in the first statement after the definition of a class, module, function or method.
+Using this for segments of code can be useful to a programmer and collaborators in aiding their understanding of the purpose of the code and its capabilities.
+
+15. What is pickling and unpickling in Python?Example usage.
+Pickling is the process of serializing a Python object structure, which means this object (whether it be lists, dictionaries, strings etc) will be converted into binary format/a byte stream before storing it away.
+This process aids the storing and sending of a file to be ‘reconstructed’ and loaded again in the future.
+Unpickling is the reverse process. This refers to the deserializing of a Python object structure through retrieving the byte stream and converting it back to a Python object.
+The pickle module allows for these actions, as seen in the example below:
+
+## Pickling example
+import pickle
+p_dict = {'This': 1, 'is': 2, 'my': 3, 'example': 4}
+filename = 'my_example'
+anotherfile = open(filename,'wb') #w- write. b-binary- bytes format
+pickle.dump(p_dict,anotherfile) #the object to pickle and the file it is being saved to.
+outfile.close()
+
+##Unpickling example
+newfile = open(filename,'rb') #r- read. b-binary- bytes format
+convert_dict = pickle.load(newfile)
+newfile.close()
+
+#OR another example
+import pickle
+p_list = ['this', 'is', 'my', 'example']
+with open('picklefile.txt', 'wb') as f:
+   pickle.dump(p_list, f)
+
+with open("picklefile.txt", "rb") as f:
+    unpick = pickle.load(f)
+
+16. What are the tools that help to find bugs or perform static analysis?
+PyChecker and Pylint are the most commonly used tools for these purposes.
+PyChecker finds bugs in python code. It can initially check there are no import errors when importing modules. It can then continue to identify other problems including: using a variable before setting it, unused function arguments, passing the wrong no. of arguments to a function, checking existing class methods are being used etc.
+Pylint checks for errors (e.g., checking interfaces implemented, modules are imported etc), assists in refactoring, and can help ensure the code meets coding standard (e.g. checking imported modules used, for well-formed variables etc).
+
+17. How are arguments passed in Python by value or by reference? Give an example.
+If done by value, these arguments are passed directly and another copy is created which exists in its own location and will not be modified unless changed directly.
+If done by reference, these arguments do not copy the exact value but rather the reference to it. Any actions performed will modify both variables, irrespective of whether they are in or outside a function since they both refer to the same assigned object.
+
+## Value example
+scores = {'cohort 1': 23, 'cohort 2': 19, 'cohort 3': 8}
+def test(scores):
+    scores = {'cohort 4':65, 'cohort 5':32}
+    print("Included:", scores)
+    return
+test(scores)
+print("Original:", scores)
+
+## Reference example
+scores = {'cohort 1': 23, 'cohort 2': 19, 'cohort 3': 8}
+def test(scores):
+    new = {'cohort 4':65, 'cohort 5':32}
+    scores.update(new)
+    print("Included:", scores)
+    return
+test(scores)
+print("Original:", scores)
+
+18. What are Dictionary and List comprehensions in Python? Provide examples.
+Dictionary and list comprehensions can be used to produce outputs with the aim of typing less code, allowing for improved effiency. They can be used to create lists or transform dictionaries based on an existing one or create a new one, as seen below.
+These examples both create a dictionary and list respectively with a single line of code that may otherwise have been created with a for loop.
+
+## Dictionary examples
+dict1 = dict([(v, v+1) for v in range(5)]) #creating dictionary where key is one less than values in range.
+print(dict1)
+
+dict2 = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+mult_dict2 = {k:v*3 for (k,v) in dict2.items()} #Multiplying each value in the dictionary by 3
+print(mult_dict2)
+
+## List examples
+list=[e*4 for e in range(1,5)] #multiplying each number in range by 4.
+print(list)
+
+methods = ["list", "dictionary", "string", "tuple"]
+methods2 = [x for x in methods if "i" in x] #finding words in list that contain an i
+print(methods2)
+
+19. What is namespace in Python?
+The namespace system manages names within a program to ensure they are uniquely identifiable, preventing conflicts from arising when variables are created/called upon.
+In Python, names can be mapped to their assigned objects in a dictionary-like format, with names acting as keys while the assigned objects are the values.
+The potential for overwrites or interference is dependent on the location/scope of the namespace (i.e., built-in, global, local). For example, a namespace created when a function is called only exists until that function returns/terminates while a namespace in the global scope exists until the entire script has run.
+
+20. What is pass in Python?
+A pass statement allows a programmer to execute a code that will not produce anything but would have otherwise provoked an error.
+If statements, loops, functions or classes may be left blank when yet to be implemented or code is not required but, unless a pass is incorporated, the program will throw an error, interfering with the running of the script.
+
+21. What is unit test in Python?
+A unit test is designed to test small blocks/units of source code to ensure they function as required. This helps flag up potential errors that could arise later and helps ensure the tested component is less susceptible to these before incorporating it into a larger program.
+
+22. In Python what is slicing?
+Slicing is the process of extracting elements or substrings from a sequence. A programmer can specify where they want the slicing to begin, end and the increments.
+
+23. What is a negative index in Python?
+A negative index indicates the elements are selected/accessed backwards, beginning from the end of the sequence. For example, the last character in a sequence would be identified by -1.
+
+24. How can the ternary operators be used in python? Give an example.
+Ternary operators test conditional operators using a singular line- it operates similarly to an if-statement and can be used when working with a small amount of variables.
+e.g. this example tests if a person is legally old enough to be permitted entry. It returns True since the age is assigned a number greater than 18.
+age = 19
+permit_entry = True if age >= 18 else False
+print(permit_entry)
+
+25. What does this mean: *args, **kwargs? And why would we use it?
+*args refers to non-keyword arguments, while **kwargs refers to keyword arguments.
+They can be used when unsure about the number of arguments you will want to pass into a function- rather than adhering to a fixed limit, a variable number of arguments can be passed through (i.e. variable length arguments, or variable keyword arguments)
+
+26. How are range and xrange different from one another?
+range() creates and stores the list before iterating and therefore returns a list, while xrange does not store elements and returns an xrange() object. It follows that list methods can be used upon range() outputs but not upon xrange() outputs.
+
+27. What is Flask and what can we use it for?
+Flask is a Python web framework which contains the tools, modules etc allowing a programmer to create a web application (e.g. blogs, commercial websites, social networks, other web pages), with little dependency on other libraries or modules (hence the name 'micro-framework')
+
+28. What are clustered and non-clustered index in a relational database?
+A clustered index is a technique that allows for faster searching/accessing of records. It sorts the data rows in a table on their key values and so it is ordered in one direction, meaning there can only be one clustered index per table. Assigning a primary key typically allows for a clustered index to be applied upon that column.
+Non-clustered index stores data in a different location to the indices and so multiple can be applied to a table. Non-clustered indexes also do not show ordered data, unlike clustered indexes.
+
+29. What is a ‘deadlock’ a relational database?
+A deadlock occurs when multiple transactions/processes are having to wait for locks to be released upon the resource they require.
+Neither transaction/process can continue as they have a lock on the demanded resource while waiting for another locked one- this may require an abort or roll back on an action to terminate the waiting state.
+
+30. What is a ‘livelock’ a relational database?
+A livelock occurs when requesting an exclusive lock fails due to overlapping shared locks interfering with each other. The processes change to adapt to each other. While they do not indefinitely wait, like in a deadlock, this does prevent any progress being made.
