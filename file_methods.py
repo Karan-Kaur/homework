@@ -1,4 +1,6 @@
 # Section 7: Python file methods- describe each method and provide an example
+#the original file contents are pasted at the bottom of this document :)
+
 # File Methods
 #1) read()- this method returns the bytes that are read from the file in a string.
 # There is an optional size parameter which allows you to specify the number of bytes- the default is -1 which means the whole file will be read.
@@ -32,3 +34,8 @@ f = open("karan_info.txt", 'r') #checking the file again
 print(f.read())
 
 
+####original text file
+#Hi, my name's Karan.
+#I'm not quite sure what to write, I just needed this text file for the assessment.
+#Hmmm...
+#I am quite hungry. Can't think beyond that.
