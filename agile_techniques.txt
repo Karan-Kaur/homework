@@ -1,0 +1,44 @@
+Homework: Lesson 10 – Agile Techniques
+
+###Question 1- definitions for Scrum related key terminology.
+#SCRUM CEREMONIES
+• Product backlog refinement- this process is typically undertaken by the product owner and development team to adapt the product backlog (perhaps through adding or removing items)
+and the contents of the items (e.g., through adding details or segmenting items)- this ongoing interaction helps assert the clarity and scope for the items to be worked upon.
+
+• Sprint planning- This is a scrum team’s collaborative process of essentially laying out the framework/sprint backlog for the upcoming sprint, including:
+the clarification of the goals and value of sprint, discussing the scope of the sprint through selecting items from the product backlog, and clarifying how the work will be segmented into smaller items and tackled to achieve the goals.
+
+• Daily scrum- this is a daily scheduled, short meeting (approx. 15 mins) that is held between developers to assess the team's progress towards meeting the goals of the sprint and ensure everyone is updated regarding the next steps.
+
+• Sprint review- this involves a meeting held at the end of a sprint between the developers, the product owner, scrum master, and stakeholders which typically consists of the following actions:
+presenting a demo showcasing the scrum team’s accomplishments and setbacks to stakeholders against the previously clarified goals;
+acquiring feedback from stakeholders (providing insight regarding customer expectations);
+a collaborative effort to discuss the next steps based upon a review of timelines, budgets, markets etc.
+
+• Sprint retrospective- this process takes place after the completion of a sprint and involves the scrum team analysing and discussing their methods of working throughout the sprint;
+this may result in a discussion regarding what went well, what did not go as well, and what can be done to improve these fallbacks to better prepare the team for a future sprint.
+
+#SCRUM ROLES
+• ScrumMaster- The scrum master enacts the scrum framework/guidelines, which are based upon agile principles, to guarantee the effectiveness and productivity of a scrum. This includes the following responsibilities:
+facilitating communications between the team and with external stakeholders through arranging meetings that are conducted within a given timebox (incl. daily scrums, sprint reviews); removing barriers to progress;
+facilitating collaboration with stakeholders;
+providing guidance regarding the managing of product backlog and the defining of product goals and items.
+
+• Product Owner- The product owner is the most explicit link between the scrum team and the customer/stakeholders. In representing their customers, they are responsible for ensuring a valuable product is produced on time through managing the product backlog
+(i.e., clarifying the product goal and the product backlog items, ordering these items, and ensuring these steps are understood and achievable).
+
+• Development Team- The development team are those within the scrum team who are responsible for building the product as laid out in the sprint goals, including the designing, integrating, and testing of items.
+They are actively involved in every ceremony to assess the team's progress, determine the next steps and gain clarity regarding their responsibilities throughout a sprint.
+
+###Question 2
+Description of new yoga booking system:
+• It has a very simple interface to accept user input (bookings) and display classes information
+• All bookings, appointments, schedule etc should be stored in a SQL database.
+• There is ‘backend’ system that should be written in Python to handle the logic and manage
+the data flow.
+- two weeks to build a simple prototype that will be shown to the client to seek their feedback and discuss further enhancements.
+
+TASK
+• Break this task into smaller stories (chunks of work) for the team to work on.
+• Assume that one person works on one task.
+• Mark tasks that can be worked on in parallel and perhaps those that need to be worked on in particular order.
