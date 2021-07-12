@@ -38,7 +38,25 @@ Description of new yoga booking system:
 the data flow.
 - two weeks to build a simple prototype that will be shown to the client to seek their feedback and discuss further enhancements.
 
-TASK
-• Break this task into smaller stories (chunks of work) for the team to work on.
-• Assume that one person works on one task.
-• Mark tasks that can be worked on in parallel and perhaps those that need to be worked on in particular order.
+Overview of scripts to be made:
+- sql script- creating the database which will contain the classes, booking slots and days (availability)
+- main script- booking interface asking the users for the contact info (initial registration or log in), the class they wish to sign up for, confirming their booking
+- app script- containing the get request for availability and put requests for booking and client info.
+- connection script- retrieving booking data from the DB and updating the booking data when a user confirms it.
+
+Splitting the tasks into units or smaller stories:
+- Prior to the other actions, the database must first be designed in SQL with at least a few fields and entries
+to allow for testing of functionality. This may be populated further as the backend and user interface tasks are underway.
+The creation of the separate tables required could be achieved in parallel as the developers work on inputting the information regarding the clients and the classes into their respective tables.
+
+- The next step would be to handle the backend system which will allow for interaction with the SQL database.
+This may be split with a program having the purpose of retrieving the availability data in order to find the yoga class slots and showcase them in the user interface to be created.
+The other story would consider the need to put info into the database when a new booking has been created and a clients info has been input.
+
+- Tasks regarding the user interface may be worked upon in parallel.
+This could be split to tackle the priorities which would be to showcase the classes and mark the available slots
+before asking a user to select and confirm the yoga class they wish to attend.
+Another important action would be to ask the user for their contact details which would save their spot and assist
+identification. The task would be create a program which would take their name and email, thereby registering the client.
+
+
