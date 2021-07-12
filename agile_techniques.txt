@@ -48,9 +48,11 @@ Splitting the tasks into units or smaller stories:
 - Prior to the other actions, the database must first be designed in SQL with at least a few fields and entries
 to allow for testing of functionality. This may be populated further as the backend and user interface tasks are underway.
 The creation of the separate tables required could be achieved in parallel as the developers work on inputting the information regarding the clients and the classes into their respective tables.
+A table containing the schedule of the yoga classes (times and instructors) may also be created, allowing the user
+to view the schedule and potential classes before making a booking.
 
 - The next step would be to handle the backend system which will allow for interaction with the SQL database.
-This may be split with a program having the purpose of retrieving the availability data in order to find the yoga class slots and showcase them in the user interface to be created.
+This may be split with a program having the purpose of retrieving the schedule and availability data in order to find the yoga class options and slots- this will be showcased in the user interface to be created.
 The other story would consider the need to put info into the database when a new booking has been created and a clients info has been input.
 
 - Tasks regarding the user interface may be worked upon in parallel.
