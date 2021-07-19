@@ -1,0 +1,35 @@
+1) Design a cinema booking system
+Dependent on the idea that the system operates for singular cinema (not a chain with theatres in different locations)
+
+Key requirements:
+- Displays the movies that are currently in cinema
+- Allow a user to pick a movie, the date, and the time slot.
+- A user could pick a movie and see the associated dates and time slots OR pick a date and the movies showing that day should show up.
+- Displays the time slots for showings of a given movie
+- Displays availability of seats- if theatre's fully booked, will not be able to confirm booking for that time.
+- Takes user's details (email address and name at the minimum) so they receive confirmation of their booking and ticket.
+- Take credit card details of the user.
+- Could ensure the user is selecting age appropriate films? i.e. minors selected movies rated below 18/R.
+- An option to cancel or ammend booking
+- Selection of tickets and fees- single, group, family (e.g. if family ticket = 4 ppl, ensure 4 seats are confirmed booked)
+- Potential selections- languages, 2D/3D, non-flash etc.
+
+Potential problems:
+- Ensuring the seats are not double booked for a given movie slot.
+- Ensuring the dates line up with the timeframe the movie is available for- e.g. if a movie will no longer be in cinema
+  by a certain month, make sure it is no longer displayed as an available option by then.
+- Handling traffic when a movie is first released?- the first week/weekend of a movie's release is likely to be the busiest- ensure the system is built
+  for a larger amount of users, esp. for this period.
+  - May lag more during these times as the bookings are quickly taken up and availability constantly checked
+- Prevent children from viewing films rated 18/R- i.e. family tickets should not be an available option for these movies. Warning should be issued about the need for ID.
+- Limiting the number of tickets that can be bought
+
+Tools:
+- Web UI wireframe- early idea for layout of the booking system
+- SQL database storing the movies, bookings made, available seats
+- Flask- assist in developing the web application
+- Python:
+  MySQL connector and configuration details to link up to the DB.
+  A script containing the code for get and put requests- to retrieve data about movie slots, available seats etc and to put confirmed bookings into the DB.
+  User interface- asking user to select the movie, input dates, select the time slot and confirm by giving their email address/contact details
+- Link to payment systems e.g. paypal, banks
