@@ -36,7 +36,15 @@ class CFGStudent(Student):
         self.average_mark = sum(self.subjects.values())/ len(self.subjects) #calculating the mean- total marks (values) divided by number of subjects
         print(self.average_mark) #print result
 
-
+#experimenting
+Karan = CFGStudent('karan', 21, 1234, 'Aleena', 'Software')
+Karan.add_subject_grade('Object oriented programming', 72)
+Karan.add_subject_grade('OOP 2', 68)
+Karan.add_subject_grade('Classifications', 67)
+Karan.view_subjects()
+Karan.get_average_mark()
+Karan.remove_subject('Classifications')
+Karan.view_subjects()
 
 
 
