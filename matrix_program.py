@@ -36,8 +36,8 @@ matrix = [
 
 def search_in_matrix(matrix, target):
     for i, indx in enumerate(matrix):
-        for j, nums in enumerate(indx):
-            if nums == target:
+        for j, number in enumerate(indx):
+            if number == target:
                 return [i, j]
     return [-1, -1]
 
